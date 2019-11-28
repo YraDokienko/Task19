@@ -1,0 +1,22 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> {% block title %} Pizzas {% endblock %}</title>
+        <style>
+            header{text-align: center}
+            body { background:  #272929; color: #ffc75c; }
+            h1 {color: red}
+        </style>
+    </head>
+<body>
+{% include "header.html" %}
+    <h1> {% block h1 %} {% endblock %} </h1>
+    <p>{% now "jS F Y H:i" %}</p>
+    <hr color="#6F9110">
+        {% block application %}
+
+        {% endblock %}
+    <hr color="#6F9110">
+</body>
+</html>

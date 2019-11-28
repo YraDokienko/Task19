@@ -11,7 +11,7 @@ class PizzaTestCase(TestCase):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'pizza_home.html')
-        self.assertContains(response, 'Список пицц')
+        self.assertContains(response, 'АМЕРИКАНО')
 
     def test_page_pizza_form_add(self):
         response = self.client.get('/pizza-form-add/')
